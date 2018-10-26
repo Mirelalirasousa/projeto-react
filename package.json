@@ -4,25 +4,15 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "react": "^16.6.0",
+    "react":"^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "^2.0.5"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build"      
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mirelalirasousa/projeto-react.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mirelalirasousa/projeto-react/issues"
-  },
-  "homepage": "https://github.com/Mirelalirasousa/projeto-react#readme",
   "browserslist": [
     ">0.2%",
     "not dead",
