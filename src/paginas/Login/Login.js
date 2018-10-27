@@ -12,10 +12,10 @@ function Login() {
             <p>Entre com seu email e senha.</p>
             
             <Legenda htmlFor="email">Email:</Legenda>
-            <Campo id="email" type="email" name="email" placeholder="Email"></Campo>
+            <Campo id="email" type="email" name="email" placeholder="Email"/>
 
             <Legenda htmlFor="senha">Senha:</Legenda>
-            <Campo id="senha" type="password" name="senha" placeholder="Senha"></Campo>
+            <Campo id="senha" type="password" name="senha" placeholder="Senha"/>
 
             <Link url='/conta'>Criar uma conta</Link>
             <Link url='/login'>Fazer login</Link>

@@ -18,10 +18,14 @@ function Conta() {
             <Campo id="telefone" type="tel" name="telefone" placeholder="Telefone"></Campo>
             
             <Legenda htmlFor="email">Email:</Legenda>
-            <Campo id="email" type="email" name="email" placeholder="Email"></Campo>
+            <Campo id="email" type="email" name="email" placeholder="Email"
+            required
+            minLength={10}/>
 
             <Legenda htmlFor="senha">Senha:</Legenda>
-            <Campo id="senha" type="password" name="senha" placeholder="Senha"></Campo>
+            <Campo id="senha" type="password" name="senha" placeholder="Senha"
+            required
+            minLength={6}/>
 
             <Link url='/conta'>Criar uma conta</Link>
             <Link url='/login'>Fazer login</Link>
