@@ -8,4 +8,4 @@ import './index.css'
 
 const divisaoProjeto = document.getElementById('projeto')
 
-ReactDOM.render(<Conta />, divisaoProjeto)
+ReactDOM.render(<Login />, divisaoProjeto)
