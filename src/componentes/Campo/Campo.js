@@ -29,7 +29,6 @@ class Campo extends Component {
         } else if (type === 'email' && !regex.test(value)) {
             mensagem = 'Valor inválido'
         }
-'''''''
         this.setState({ modificado: true, erro: mensagem }, this.props.onChange)
     }
 
