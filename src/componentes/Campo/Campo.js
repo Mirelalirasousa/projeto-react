@@ -8,9 +8,9 @@ class Campo extends Component {
     }
 
     temErro() {
-        if (!this.state.modificado || this.state.erro){
+        if (!this.state.modificado || this.state.erro) {
             return true
-        }else{
+        } else {
             return false
         }
     }
@@ -29,8 +29,8 @@ class Campo extends Component {
         } else if (type === 'email' && !regex.test(value)) {
             mensagem = 'Valor inválido'
         }
-
-        this.setState ({ modificado : true, erro: mensagem }, this.props.onChange)
+'''''''
+        this.setState({ modificado: true, erro: mensagem }, this.props.onChange)
     }
 
 

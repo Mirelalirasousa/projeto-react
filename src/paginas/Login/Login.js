@@ -11,7 +11,8 @@ class Login extends Component {
         super(props)
         this.emailRef = React.createRef()
         this.senhaRef = React.createRef()
-        this.state = {desabilitado: true }
+        
+        this.state = { desabilitado: true }
     }
     habilitaOuDesabilita = () => {
         const campoEmail = this.emailRef.current
@@ -40,7 +41,7 @@ class Login extends Component {
                     onChange={this.habilitaOuDesabilita} />
 
                 <Botao desabilitado={this.state.desabilitado}>
-                Enviar
+                    Enviar
                 </Botao>
                 <Link url='/conta'>Criar uma conta</Link>
 
