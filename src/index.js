@@ -9,10 +9,14 @@ import QuemSomos from './paginas/QuemSomos/QuemSomos'
 import NaoEncontrada from './paginas/NaoEncontrada/NaoEncontrada'
 import './index.css'
 
-let usuario = null
 
-function logaUsuario (dados){
+let usuario = JSON.parse(localStorage.getItem('usuario'))
+
+function logaUsuario(dados) {
+    const json = JSON.stringify(dados)
+    localStorage.setItem('usuario', json)
     usuario = dados
+    console.log('dados', dados)
 }
 
 function App() {
@@ -26,9 +30,9 @@ function App() {
                 }} />
 
                 <Route path="/login" render={(props) => {
-                    return <Login historico={props.history} onEnviar={logaUsuario}/>
+                    return <Login historico={props.history} onEnviar={logaUsuario} />
                 }} />
- 
+
                 <Route path="/login" component={Login} />
                 <Route path="/conta" component={Conta} />
                 <Route path="/quem-somos" component={QuemSomos} />

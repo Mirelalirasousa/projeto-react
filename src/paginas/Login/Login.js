@@ -19,7 +19,7 @@ class Login extends Component {
         evento.preventDefault()
 
         const campoEmail = this.emailRef.current
-        const campoSenha = this.senhalRef.current
+        const campoSenha = this.senhaRef.current
 
         const dados = {
             email: campoEmail.getValor(),
