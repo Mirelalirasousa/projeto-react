@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Link from '../../componentes/Link/Link';
 import Botao from '../../componentes/Botao/Botao';
 import Legenda from '../../componentes/Legenda/Legenda'
@@ -28,7 +29,7 @@ class Login extends Component {
 
         this.props.logaUsuario(dados)
 
-        this.props.historico.push('/')
+        this.props.history.push('/')
     }
 
     habilitaOuDesabilita = () => {
@@ -67,4 +68,22 @@ class Login extends Component {
         )
     }
 }
-export default Login
+
+function passaNoPropsDisparadoresDeAcao(dispatch){
+    return {
+      logaUsuario: (dados) => {
+        const acao ={
+          type: 'LOGA_USUARIO', dados: dados
+        }
+  
+        dispatch(acao)
+      }
+    }
+  }
+  const conectaNaStore = connect(
+    null, passaNoPropsDisparadoresDeAcao
+  )
+  
+  const LoginConectado = conectaNaStore(Login)
+
+export default LoginConectado
