@@ -16,14 +16,18 @@ class Postit extends Component{
         const form = evento.target
 
         const dados ={
+            id:`a997b75b-0084-4913-ac8a-3ab6fed1b73e${Math.random(100)}`,
             titulo: form.titulo.value,
             texto: form.texto.value
         }
 
         this.props.cadastraPostit(dados)
+        form.reset()
     } 
 
     render() {
+        const cadastrando = !this.props.id
+        
         return(
             <form className="postit" onSubmit={this.cadastraOuAlteraPostit}>
             <input 
